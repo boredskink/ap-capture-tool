@@ -1,8 +1,18 @@
 {% extends "base.html" %}
-{% block title %}<div class="container-lg"><h1>Home page</h1></div>{% endblock %}
+{% block title %}<div class="container"><h1>Capture Payment</h1></div>{% endblock %}
 {% block bodycontent %}
-<div class="container-lg">
-    <h2>Test header</h2>
-    <p>Paragraph</p>
+<div class="container">
+    <form method="GET|POST" action="">
+      {{ form.csrf_token }}
+        <div class="form-group">
+          {{ form.ordernumber.label }}
+          {{ form.ordernumber(size=34) }}
+          <!-- <label for="orderIdLabel">Order ID</label>
+          <input type="text" class="form-control" id="orderIdInput" aria-describedby="orderIdHelp" placeholder="123456789">
+          <small id="orderIdHelp" class="form-text text-muted">Enter order ID.</small> -->
+        </div>
+        <input type="submit" value="Capture"></input>
+        <!-- <button type="submit" class="btn btn-primary">Capture</button> -->
+      </form>
 </div>
 {% endblock %}

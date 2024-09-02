@@ -1,3 +1,4 @@
 FLASK_ENV=development
 FLASK_APP=main.py
 FLASK_DEBUG=1
+WTF_CSRF_SECRET_KEY="apple1112"
